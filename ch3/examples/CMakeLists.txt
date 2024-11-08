@@ -1,4 +1,6 @@
-include_directories("/usr/include/eigen3")
+find_package(Eigen3)
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 add_executable(coordinateTransform coordinateTransform.cpp)
 
 find_package(Pangolin REQUIRED)
